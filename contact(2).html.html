@@ -1,0 +1,186 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>About</title>
+  </head>
+  <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+  <div class="container-fluid">
+    <a  style="color: white" >Icode</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="about.html">About</a>
+        </li>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="contact(2).html.html" >Contact Us</a>
+        </li>
+        
+        
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+    <link rel="stylesheet" type="text/css" href="contact.css">
+  </header>
+
+</head>
+<body id="bg">
+<fieldset id="font-color">
+  <legend>Contact Form</legend>
+  <form method="post" autocomplete="off" name="google-sheet" class="abc">
+    Firstname<input type="text" name="fname" class="fname" placeholder="Firstname"   ><br>
+    Lastname<input type="text" name="lname" class="fname" placeholder="Last name"> <br>
+
+    
+    Gender:<br>
+  <input type="radio" name="gender">Male
+  <input type="radio" name="gender">FeMale
+  <input type="radio" name="gender">Others<br><br>
+  
+ 
+  What are your Hobbies:<br>
+  <input type="checkbox" name="Hobbies">PLaying<br>
+<input type="checkbox" name="Hobbies">Coding<br>
+<input type="checkbox" name="Hobbies">Dancing<br>
+<input type="checkbox" name="Hobbies">singing<br>
+<br>
+  DOB  <select name="Day" class="font">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <OPTION>5</OPTION>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <OPTION>10</OPTION>
+  <option>11</option>
+  <option>12</option>
+  <option>13</option>
+  <option>14</option>
+  <OPTION>15</OPTION>
+  <option>16</option>
+  <option>17</option>
+  <option>18</option>
+  <option>19</option>
+  <OPTION>20</OPTION>
+  <option>21</option>
+  <option>22</option>
+  <option>23</option>
+  <option>24</option>
+  <OPTION>25</OPTION>
+  <option>26</option>
+  <option>27</option>
+  <option>28</option>
+  <option>29</option>
+  <OPTION>30</OPTION>
+
+  </select>
+  <select name="Mon"> 
+  <option>Jan</option>
+  <option>Feb</option>
+  <option>March</option>
+  <option>April</option>
+  <OPTION>May</OPTION>
+  <option>June</option>
+  <option>Juky</option>
+  <option>August</option>
+  <option>september</option>
+  <OPTION>October</OPTION>
+  <option>Novomber</option>
+  <option>December</option>
+  
+
+  </select>
+  <select name="Year"> 
+  <OPTION>1975</OPTION>
+  <OPTION>1976</OPTION> 
+  <OPTION>1977</OPTION>
+  <OPTION>1978</OPTION>
+  <OPTION>1979</OPTION>
+  <OPTION>1980</OPTION>
+  <OPTION>1981</OPTION>
+  <OPTION>1982</OPTION>
+  <OPTION>1983</OPTION>
+  <OPTION>1984</OPTION>
+  <OPTION>1986</OPTION>
+  <OPTION>1986</OPTION>
+  <OPTION>1987</OPTION>
+  <OPTION>1988</OPTION>
+  <OPTION>1989</OPTION>
+  <OPTION>1999</OPTION>
+  <OPTION>2000</OPTION>
+  <OPTION>2001</OPTION>
+  <OPTION>2002</OPTION>
+  <OPTION>2003</OPTION>
+  <OPTION>2004</OPTION>
+  <OPTION>2005</OPTION>
+  <OPTION>2006</OPTION>
+
+</select><br><br>
+DOB: 
+<input type="date" name="calander"><br><br>
+
+Enter your email:<input type="email" name="email"><br><br>
+
+<textarea cols="10" rows="10" class="text" placeholder="enter your address">
+  
+
+</textarea><br><br>
+<button class="submit" type="submit" value="Login" onclick="alert ('Are you sure')" >
+  Submit
+</button>
+<input class="reset" type="reset" name="re">
+
+
+<script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzmFYeboMHP0240rwBIXNf3FuMbhVtSS5Uuk2czSiDb3so_tuX7RzOCXg/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+
+
+
+
+  </form>
+</fieldset>
+
+
+</body>
+<footer>
+  Copyright &copy; Bikram 2020
+</footer>
+</html>
